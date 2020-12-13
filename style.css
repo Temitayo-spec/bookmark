@@ -1,0 +1,755 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body{
+    width: 100%;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+}
+
+.hamburger{
+    cursor: pointer;
+}
+
+.burger{
+    transition: 0.5s ease;
+}
+
+.close{
+    display: none;
+    transform: rotate(180deg);
+    transition: 0.5s ease;
+}
+
+.navbar .mark{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2em 0;
+    margin: 0 auto;
+    width: 80%;
+}
+
+.navbar .mark svg{
+    fill: #fff;
+    transition: 0.5s ease;
+}
+
+.navlinks{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    opacity: 90%;
+    width: 100%;
+    z-index: 10;
+}
+
+.navlinks ul{
+    display: none;
+    position: absolute;
+    text-align: center;
+    background: hsl(229, 31%, 21%);
+    width: 100%;
+    height: 87vh;
+    z-index: 10;
+    transition: 0.5s ease;
+}
+
+.navlinks ul li{
+    list-style: none;
+    border-bottom: 1px solid rgba(99, 96, 96, 0.9);
+    width: 80%;
+    margin: 1em auto;
+    padding: 1em;
+}
+
+.navlinks ul li a{
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 2em;
+}
+
+.navlinks ul li a:hover{
+    color: hsl(0, 94%, 66%);
+}
+
+.navlinks ul .icons{
+   position: relative;
+   top: 20%;
+}
+
+.navlinks ul button{
+    width: 90%;
+    margin: 1em auto;
+    padding: 1em;
+    background: hsl(229, 31%, 21%);
+    border: 2px solid white;
+    border-radius: 5px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+}
+
+.section-a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.section-a img{
+    width: 90%;
+}
+
+.manager{
+    text-align: center;
+}
+.manager h1{
+    font-size: 2.2em;
+    color: hsl(229, 31%, 21%);
+}
+
+.manager p, .features p, .features-tab p, .download p, .box .card p, .faq p{
+    margin: 0 2.5em;
+    font-size: 1.1em;
+    color: hsl(229, 8%, 60%);
+}
+
+.get-it-btn{
+    display: flex;
+    margin: 0 1em;
+}
+
+.get-it-btn button{
+    margin: 2em 0.3em;
+    padding: 1.2em;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+    width: 100%;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.chrome{
+    background: hsl(231, 69%, 60%);
+    color: white;
+}
+
+.chrome:hover, .features-tab button:hover, .box .card button:hover, .section-d button:hover{
+    background: hsl(231, 71%, 70%);
+}
+
+.firefox{
+    color: hsl(229, 8%, 60%);
+}
+
+.firefox:hover{
+    background: rgb(211, 205, 205);
+}
+
+.section-b{
+    align-items: center;
+    text-align: center;
+    z-index: 0;
+}
+
+.features h1{
+    color: hsl(229, 31%, 21%);
+    font-size: 2.2em;
+}
+
+.links{
+    width: 90%;
+    align-self: center;
+    margin: 1em auto;
+}
+
+.links div{
+    border-top: 1px solid hsl(229, 8%, 60%);
+    padding: 1em;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.links #sharing{
+    border-bottom: 1px solid hsl(229, 8%, 60%);
+}
+
+.links div li{
+    list-style: none;
+    color: hsl(229, 31%, 21%);
+    font-size: 1.3em;
+    font-weight: 500;
+    opacity: 70%;
+    cursor: pointer;
+}
+
+.links div:after{
+    position: absolute;
+    top: 95%;
+    content: "";
+    height: 4px;
+    width: 40%;
+    background:hsl(0, 94%, 66%);
+    opacity: 0;
+    transition: all 0.3s linear;
+    border-radius: 8px;
+}
+
+.links div:hover:after{
+    opacity: 1;
+}
+
+div.active:after{
+    opacity: 1;
+}
+
+.one-click{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.one-click img{
+    width: 90%;
+}
+
+.features-tab{
+    margin: 2em auto;
+}
+
+.features-tab h1{
+    font-size: 1.9em;
+    color: hsl(229, 31%, 21%);
+}
+
+.features-tab button{
+    padding: 1em;
+    background: hsl(231, 69%, 60%);
+    border: none;
+    color: white;
+    border-radius: 5px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.4);
+    margin: 1em auto;
+    display: none;
+}
+
+.intelligent, .share{
+    display: none;
+}
+
+.section-c{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.section-c .download{
+    margin: 2.5em auto;
+    text-align: center;
+}
+.section-c .download h1{
+    font-size: 1.8em;
+    color: hsl(229, 31%, 21%);
+}
+
+.flex{
+    width: 100%;
+}
+
+.box{
+    width: 100%;
+}
+
+.box .card{
+    padding: 2em;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    margin: 1em auto;
+    text-align: center;
+    border-radius: 8px;
+    background: url('bg-dots.svg') no-repeat;
+    background-position-y: 73%;
+}
+
+.box .card img{
+    margin: 2em auto;
+}
+
+.box .card h3{
+    font-size: 1.4em;
+    color: hsl(229, 31%, 21%);
+}
+
+.box .card p{
+    margin: 0.6em auto;
+}
+
+.box .card button{
+    padding: 1em;
+    width: 100%;
+    margin-top: 2em;
+    border: none;
+    color: white;
+    background: hsl(231, 69%, 60%);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.section-d{
+    display: flex;
+    margin: 3em auto;
+    flex-direction: column;
+}
+
+.faq{
+    text-align: center;
+}
+
+.faq h1{
+    font-size: 2.1em;
+    color: hsl(229, 31%, 21%);
+}
+
+.accordion{
+    width: 90%;
+    margin: 2em auto;
+}
+
+.accordion .label{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0.5em auto;
+    padding: 1em 0;
+    border-bottom: 1px solid hsl(229, 8%, 60%);
+    cursor: pointer;
+}
+
+.accordion .label h2{
+    font-size: 1.1em;
+    font-weight: 400;
+    color: hsl(229, 31%, 21%);
+}
+
+.accordion .label svg{
+    margin-left: auto;
+    stroke:#5267DF;
+    transition: 0.5s;
+}
+
+.contentBx.active svg{
+    transform: rotate(180deg);
+    stroke: hsl(0, 94%, 66%);
+    transition: 0.5s;
+}
+
+.contentBx.active .accordion .label{
+    border-bottom: none;
+}
+
+.content{
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    transition: 0.5s;
+    overflow-y: auto;
+}
+
+.contentBx.active .content {
+    height: 100%;
+    transition: 0.5s;
+}
+
+.contentBx{
+    position: relative;
+}
+
+.contentBx p{
+    color: hsl(229, 8%, 60%);
+    font-size: 1.3em;
+    padding: 10px;
+    line-height: 1.3;
+    transition: 0.5s;
+}
+
+
+.section-d button{
+    align-self: center;
+    padding: 1em;
+    background: hsl(231, 69%, 60%);
+    border: none;
+    color: white;
+    border-radius: 5px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.4);
+    margin: 1em auto;
+    outline: none;
+    cursor: pointer;
+}
+
+.section-e{
+    text-align: center;
+    background: hsl(231, 69%, 60%);
+    padding: 3em 0;
+}
+
+.section-e h2{
+    font-size: 1.2em;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 500;
+}
+
+.section-e h1{
+    color: white;
+    font-weight: 700;
+    font-size: 1.7em;
+    padding: 0 1em;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 2em auto 1em;
+}
+
+.msg input{
+    padding: 0.8em;
+    border-radius: 5px;
+    border: none;
+    width: 100%;
+}
+
+form p{
+    background: hsl(0, 94%, 66%);
+    color: white;
+    text-align: left;
+    padding: 0.5em;
+    display: none;
+}
+
+form button{
+    margin-top: 2em;
+    padding: 1em;
+    background: hsl(0, 94%, 66%);
+    border: none;
+    border-radius: 3px;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+    outline: none;
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: hsl(229, 31%, 21%);
+}
+
+footer svg{
+    margin: 2em auto;
+}
+
+footer .about{
+    display: flex;
+    flex-direction: column;
+}
+
+footer .about  a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.6em;
+    font-weight: 100;
+    margin: 0.5em auto;
+}
+
+footer .about  a:hover{
+    color: hsl(0, 94%, 66%);
+}
+
+.icons svg{
+    margin: 1.5em;
+    fill: white;
+    cursor: pointer;
+}
+
+.icons svg:hover{
+    fill: hsl(0, 94%, 66%);
+}
+
+@media screen and (min-width: 700px){
+    .hamburger{
+        display: none;
+    }
+
+    .navbar{
+        display: flex;
+        flex-wrap: nowrap;
+        position: static;
+    }
+
+    .navlinks .mark{
+        margin: 0;
+    }
+
+    .navlinks ul{
+        display: flex;
+        align-items: center;
+        position: static;
+        text-align: start;
+        width: 40%;
+        height: auto;
+        background: none;
+        margin-left: auto;
+        margin-right: 12em;
+    }
+
+    .navlinks ul .icons{
+        display: none;
+    }
+
+    .navlinks ul li{
+        position: static;
+        border-bottom: none;
+        margin: 0;
+        width: 100%;
+    }
+
+    .navlinks ul li a{
+        margin: 0;
+        font-size: 0.8em;
+        color: hsl(229, 31%, 21%);
+        text-transform: uppercase;
+        font-weight: 600;
+    }
+
+    .navbar .title{
+        width: 50%;
+        margin-left: 5em;
+    }
+
+    .navlinks{
+        display: flex;
+        flex-direction: row;
+        position: static;
+        align-items: flex-start;
+        z-index: 0;
+        text-align: start;
+    }
+
+    .navlinks ul button{
+        width:  100%;
+        padding: 0.5em 1em;
+        font-weight: 400;
+        background: hsl(0, 94%, 66%);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .navlinks ul button:hover{
+        background: hsl(0, 85%, 73%);
+    }
+
+    .section-a{
+        flex-direction: row-reverse;
+        margin: 1em auto;
+        align-items: flex-start;
+    }
+
+    .section-a img{
+        margin: 1em;
+        width: 50%;
+    }
+
+    .manager{
+        text-align: left;
+        margin-left: 5em;
+    }
+
+    .manager h1{
+        margin-left: 0.5em;
+        font-size: 4.5em;
+    }
+
+    .manager p{
+        margin-left: 1.4em;
+        font-size: 1.7em;
+    }
+
+    .get-it-btn button{
+        width: 35%;
+    }
+
+    .features{
+        width: 40%;
+        margin: 1em auto;
+    }
+
+    .features h1{
+        margin: 0.3em auto;
+        font-size: 2.6em;
+    }
+
+    .features p{
+        font-size: 1.45em;
+    }
+
+    .links{
+        display: flex;
+        justify-content: center;
+        border-bottom: 1px solid hsl(229, 8%, 60%);
+        width: 60%;
+    }
+
+    .links div{
+        border-top: none;
+        margin: 1em 0 0 0;
+        width: 100%;
+    }
+
+    .links div li{
+        font-weight: 700;
+    }
+
+    .links #sharing{
+        border-bottom: none;
+    }
+
+    .one-click{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        margin: 4em 8em;
+    }    
+
+    .one-click img{
+        width: 50%;
+    }
+
+    .features-tab{
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        margin: 0 2em;
+        width: 40%;
+    }
+
+    .features-tab h1{
+        margin-left: 1em;
+        font-size: 3em;
+    }
+
+    .features-tab p{
+        font-size: 1.5em;
+    }
+
+    .features-tab button{
+        display: inline-block;
+        margin: 2em 0 0 3em;
+        width: 30%;
+        cursor: pointer;
+    }
+
+    .intelligent, .share{
+        display: none;
+    }
+
+    .download{
+        width: 45%;
+    }
+
+    .section-c .download  h1{
+        font-size: 2.2em;
+    }
+
+    .flex{
+        display: flex;
+        flex-direction: row;
+        width: 80%;
+    }
+
+    .box2{
+        margin-top: 4em;
+    }
+
+    .box3{
+        margin-top: 8em;
+    }
+
+    .section-d{
+        width: 30%;
+    }
+
+    .section-e h2{
+        letter-spacing: 0.2em;
+        font-size: 0.9em;
+    }
+
+    .section-e h1{
+        width: 35%;
+        font-size: 2em;
+        margin: 0.5em auto;
+    }
+
+    .msg{
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+    }
+
+    form{
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    form input{
+        width: 40%;
+    }
+
+    form button{
+        margin: 0 2em;
+    }
+
+    footer{
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    footer svg{
+        margin: 2em 2em;
+    }
+
+    footer .about{
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: 20%;
+        margin-left: 3em;
+    }
+
+    footer .about  a{
+        text-transform: uppercase;
+        font-size: 0.9em;
+    }
+
+    footer .icons{
+        margin-left: auto;
+        margin-right: 5em;
+    }
+}
